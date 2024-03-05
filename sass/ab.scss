@@ -1,0 +1,146 @@
+@import "variable";
+@import "reuse";
+
+body {
+  background-color: $main-bg-color;
+}
+
+.pare {
+  width: 100%;
+  margin: 0 auto;
+
+  .page {
+    margin: 0 auto;
+    @include display(space-between, row);
+
+    .text {
+      width: 90%;
+      margin: 0 auto;
+      align-self: center;
+    }
+
+    .about-page {
+      width: 80%;
+    }
+    img{
+      margin: 0 auto;
+    }
+  }
+
+  button {
+    @include btnpro();
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    i {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  h1 {
+    color: #3d5af1;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  p {
+    color: $main-text-color;
+    font-family: map-get($font-family, nor);
+    opacity: 0.9;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+.auth_tech {
+  width: 100%;
+  padding-top: 50px;
+  background-color: rgba(85, 120, 138, 0.46);
+  position: absolute;
+  left: 0;
+
+  .author {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  margin-top: 250px;
+}
+
+.tech {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+
+  div {
+    font-size: 25px;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin: 30px;
+  }
+  a {
+    color: $main-text-color;
+  }
+}
+
+.middle_tech {
+  @include display(space-between, row);
+  max-width: 90vw;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.author-profile {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  .about-author {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid #3d5af1;
+  }
+  p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    .fa-quote-left {
+      transform: translate(-15px, -15px);
+      font-size: 35px;
+      color: white;
+    }
+  }
+  .fa-envelope,
+  .fa-facebook,
+  .fa-x-twitter {
+    color: white;
+    font-size: 28px;
+    margin: 30px 10px;
+  }
+}
+
+.footer-about {
+  text-align: center;
+  color: $main-text-color;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  span {
+    color: #22d1ee;
+    font-size: 22px;
+    font-family: map-get($font-family, name);
+  }
+}

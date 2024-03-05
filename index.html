@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music PLayer</title>
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.js"></script>
+    <!-- css  -->
+    <link rel="stylesheet" href="./dist/css/ab.css">
+    <!-- css  -->
+    <link rel="stylesheet" href="./dist/css/home.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./dist/css/index.css">
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div class="head">
+        <header>
+            <div class="logo">
+                Imusic
+            </div>
+            <div class="mid">
+                <ul>
+                    <li id="home" hx-get="/home.html" hx-target=".parent">Home</li>
+                    <li id="about" hx-get="/about.html" hx-target=".parent">About</li>
+                </ul>
+                <div class="bot"></div>
+            </div>
+            <div class="btn" id="listen">
+                <button hx-get="/album.html" hx-target=".parent">Listen</button>
+            </div>
+            <div class="humberger">
+                <div class="ds one"></div>
+                <div class="two ds mid"></div>
+                <div class="ds three"></div>
+            </div>
+        </header>
+    </div>
+    <div class="parent" hx-get="/home.html" hx-trigger="load">
+
+    </div>
+    <div class="res-hum">
+        <p id="home" hx-get="/home.html" hx-target=".parent">Home</p>
+        <p id="about" hx-get="/about.html" hx-target=".parent">About</p>
+        <button hx-get="/album.html" hx-target=".parent">Listen</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+@import 'variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: $main-bg-color;
+  font-family: map-get($font-family, nor);
+  overflow-x: hidden;
+}
+
+@mixin display($jus, $dir) {
+    display: flex;
+    justify-content: $jus;
+    flex-direction: $dir;
+  }
+  
+  @mixin btnpro() {
+    padding: 8px 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 15px;
+    color: $main-text-color;
+    background-color: #3d5af1;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 3px 3px 5px #3d5af1;
+    }
+  }
+  
+  @mixin count($width, $height, $radius) {
+    width: $width;
+    height: $height;
+    text-align: center;
+    color: $main-text-color;
+    border-radius: $radius;
+    font-size: 17px;
+    background: rgb(38, 61, 61);
+    background: linear-gradient(
+      0deg,
+      rgba(38, 61, 61, 1) 1%,
+      rgba(14, 82, 149, 1) 100%
+    );
+  }

@@ -1,0 +1,99 @@
+.play-text {
+  text-align: center;
+  color: white;
+  margin: 100px 0;
+  letter-spacing: 2px;
+  font-family: "Inter";
+}
+.music-parent {
+  background-color: azure;
+  max-width: 90vw;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 25px 20px;
+}
+
+.time {
+  background-color: azure;
+  width: 300px;
+  max-width: 70vw;
+  padding-top: 30px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.progress-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: grey;
+  height: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  margin-left: 0px;
+  background-color: black;
+  height: 8px;
+  width: 8px;
+  border-radius: 5px;
+  transform: translateY(-2px);
+}
+
+.image {
+  width: 130px;
+  display: block;
+  height: 130px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid blueviolet;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-parent.play .image {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  opacity: 0.7;
+  width: 150px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 25px;
+  margin-top: 70px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.footer-album {
+  text-align: center;
+  color: white;
+  margin-top: 220px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-album span {
+  color: #22d1ee;
+  font-size: 22px;
+  font-family: "Inter";
+}
